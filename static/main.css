@@ -1,0 +1,26 @@
+h1{
+  font-size: 50px;
+  margin-bottom: 10px;
+  margin-left: 5%;
+}
+
+body{
+  font-family: 'Montserrat';
+  background-color: #eea29a;
+}
+
+.job-container{
+  margin-left: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 80%;
+}
+
+.job{
+  padding: 15px;
+  width: 350px;
+  background-color: #deeaee;
+  border-radius: 10px;
+  box-shadow: 4px 7px 21px 0px rgba(0,0,0,0.75);
+  margin: 10px;
+}

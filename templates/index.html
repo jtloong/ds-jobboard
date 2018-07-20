@@ -1,0 +1,52 @@
+<!doctype html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One|Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+  <title>Data Science Job Board</title>
+  <h1>Data Science Job Board</h1>
+  <div class='job-container'>
+    {% for job in data %}
+      <div class='job'>
+        <h3><a href={{ job.link }} target='_blank'>{{ job.title }}</a></h3>
+        <p><b>Company:</b> {{ job.company}}</p>
+        <p><b>Location:</b> {{ job.location }}</p>
+        <p><b>Date:</b> {{ job.posting_date }}</p>
+        <p>{{ job.description }}</p> </br>
+      </div>
+    {% endfor %}
+  </div>
+  <!-- <div class="outer-box">
+    <h1>Data Science Job Board</h1>
+    <form action="/upload/" method=post enctype=multipart/form-data>
+      <p><input class="input-file" id='input-file' type=file name=file /></p>
+          <button class="buttons" name="upload_button" type="submit"><span class='button-text'>Analyze</span></button>
+
+    </form>
+
+
+
+    <table>
+        <tr>
+          <th>Colour Name</th>
+          <th>General Hexcode</th>
+          <th>Colour Bubble</th>
+          <th>Proportion Represented</th>
+        </tr>
+      {% for color in data %}
+        <tr>
+          <td>{{ color.name }}</td>
+          <td>{{ color.hex_approx }}</td>
+          <td><div class='color_circle' style='background: {{ color.hex_approx}};'></div></td>
+          <td>{{ color.proportion }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+
+  </div> -->
+</body>
